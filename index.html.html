@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PhD Candidate Presentation - Sara Bavi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/league.min.css" id="theme">
+  <style>
+    .reveal h1, .reveal h3 { text-transform: none; }
+    .reveal .slide-background { background-color: #F4F4F4; } 
+    .reveal h2 { text-transform: none; color: #2C2C2C !important; }
+    .reveal h3, .highlight { color: #666666 !important; }
+    .reveal p, .reveal li, .small-text, .slide-description { color: #333333 !important; }
+    .small-text { font-size: 0.7em; line-height: 1.4; }
+    ul { display: inline-block; text-align: left; margin-bottom: 20px; }
+    li { margin-bottom: 10px; font-size: 0.85em; }
+    .media-container { margin-top: 15px; display: flex; justify-content: center; align-items: center; gap: 10px; }
+    img, video { max-height: 350px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: contain; }
+    .constrained-img { max-height: 280px !important; width: auto; }
+    .tight-video { max-height: 280px !important; }
+    .reveal .slide-number {
+      background-color: transparent !important; font-size: 24px !important;
+      color: #ffd700 !important; font-weight: bold; bottom: 20px; left: 20px; right: auto;
+    }
+    .web-link { color: #007b7f; font-size: 0.85em; text-decoration: none; margin-left: 8px; }
+    .web-link:hover { text-decoration: underline; }
+    .slide-description { font-size: 0.75em; margin-bottom: 15px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+        <h2>Attention to Professor Götz</h2>
+        <h3 style="margin-bottom: 50px;">A Presentation of Academic & Industrial Projects</h3>
+        <p class="small-text"><strong>March 2026</strong></p>
+        <p class="small-text">Sara Bavi</p>
+      </section>
+
+      <section>
+        <h2>Academic Background</h2>
+        <ul style="font-size: 0.8em; width: 95%;">
+          <li><strong>Master of Science: Control and Automation Engineering</strong><br>
+          RPTU Kaiserslautern | Expected: 04/2026 | Grade: 1.5</li>
+          <li><strong>Master of Science: Electrical Engineering (Energy Systems)</strong><br>
+          Shahid Beheshti University | Tehran, Iran | Grade: 1.5</li>
+          <li><strong>Bachelor of Science: Electronics Engineering</strong></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Technical Skills</h2>
+        <ul style="font-size: 0.9em;">
+          <li><strong>Protocols:</strong> Modbus TCP/IP, MQTT, CAN, HART, etc.</li>
+          <li><strong>Hardware:</strong> Field instruments (Transmitters, 2D/3D cameras, edge detectors).</li>
+          <li><strong>Software Tools:</strong> MATLAB, Simulink, Node-RED.</li>
+          <li><strong>Systems:</strong> Embedded Linux (ARM, Intel, NVIDIA) & FPGA.</li>
+          <li><strong>Programming:</strong> Python, C/C++ and JavaScript.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Research Assistant (HiWi)</h2>
+        <h3 class="highlight">RPTU | October 2024 – January 2026</h3>
+        <p>Automated SCADA Generation</p>
+      </section>
+
+      <section>
+        <h2>Data Flow Pipeline</h2>
+        <div class="slide-description">
+          <strong>Motivation:</strong> Treat firmware headers as the single source of truth to eliminate manual dashboard configuration.<br>
+          <strong>Process:</strong> Parses C-code headers → Synthesizes JSON → Generates deployable Node-RED flows.
+        </div>
+        <div class="media-container"><img src="scada_overview.jpg" class="constrained-img"></div>
+      </section>
+
+      <section>
+        <h2>Generated SCADA Dashboard</h2>
+        <div class="slide-description">
+          Dynamically constructed UI widgets, MQTT nodes, and signal plots based strictly on firmware definitions.
+        </div>
+        <div class="media-container"><img src="Node-RED Dashboard.png"></div>
+      </section>
+
+      <section>
+        <h2>System Validation (Digital Twin)</h2>
+        <div class="slide-description">
+          Validated using a PLECS simulation of a Boost converter.<br>
+          Confirmed bidirectional MQTT communication, real-time telemetry decoding, and fault handling.
+        </div>
+        <div class="media-container"><img src="Verification and Validation.jpg" class="constrained-img"></div>
+      </section>
+
+      <section>
+        <h2>Research Assistant (HiWi)</h2>
+        <h3 class="highlight">RPTU | March 2024 – June 2025</h3>
+        <p>Battery Monitoring System</p>
+      </section>
+
+      <section>
+        <h2>Architecture & Protocols</h2>
+        <ul>
+          <li><strong>Hardware:</strong> Battery Cabinet, Booster, Ethernet Modem.</li>
+          <li><strong>Protocols:</strong> Modbus TCP/IP & CAN Bus.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>System Demo</h2>
+        <div class="slide-description">
+          Live monitoring of individual cell voltages, temperatures, and alarm states.<br>
+          Fully integrated HMI dashboard running in a containerized environment.
+        </div>
+        <div class="media-container">
+          <video data-autoplay loop muted controls class="tight-video"><source src="battery_monitoring.mp4" type="video/mp4"></video>
+        </div>
+      </section>
+
+      <section>
+        <h2>R&D Engineer</h2>
+        <h3 class="highlight">Vetron Typical Europe | Part time | July 2025 – Present</h3>
+        <p>Seam Path Detection</p>
+        <a href="https://www.vetrontypical-europe.com/" target="_blank" class="web-link">www.vetrontypical-europe.com</a>
+      </section>
+
+      <section>
+        <h2>Hardware & Integration</h2>
+        <div class="slide-description">
+          <strong>Goal:</strong> Detect seam paths on fabrics to adjust decorative stitch positions automatically.<br>
+          <strong>Setup:</strong> Industrial Sewing Machine, XIMEA MONO8 Camera, and CAN protocol data exchange.
+        </div>
+        <div class="media-container"><img src="Hardware & Componnents.jpg" style="max-height: 280px;"></div>
+      </section>
+
+      <section>
+        <h2>System Dynamics</h2>
+        <div class="slide-description">
+          Compensating for vibrations and fabric wrinkles during wheel motion.<br>
+          Achieving continuous tracking to minimize manual alignment and human error.
+        </div>
+        <div class="media-container">
+          <video data-autoplay loop muted controls class="tight-video"><source src="Moving with rollers.mp4" type="video/mp4"></video>
+        </div>
+      </section>
+
+      <section>
+        <h2>Algorithm & Path Detection</h2>
+        <div class="slide-description" style="text-align: left; display: inline-block; font-size: 0.65em;">
+          <strong>Vision Pipeline:</strong> CLAHE, Gaussian Blur, and Gabor Filters extract texture patterns.<br>
+          <strong>Optimal Control:</strong> Dynamic programming finds the lowest-cost seam in a bidirectional cumulative cost matrix.<br>
+          <strong>Path Fitting:</strong> Polynomial curve fitting combined with RANSAC ensures smooth control.
+        </div>
+        <div class="media-container">
+          <video data-autoplay loop muted controls class="tight-video"><source src="Seam Path Detection movie 02.mp4" type="video/mp4"></video>
+        </div>
+      </section>
+
+      <section>
+        <h2>Academic Research in RPTU University Kaiserslautern-Landau</h2>
+        <div style="margin-top: 50px; text-align: left; display: inline-block;">
+          <ul style="font-size: 1.2em;">
+            <li class="highlight">Multi-Robot Planning with MPC</li>
+            <li class="highlight">Pick and Place Robot</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="highlight">Multi-Robot Planning with MPC</h3>
+        <div style="display: flex; gap: 20px; align-items: center;">
+          <div style="flex: 1;">
+            <ul>
+              <li><strong>Solution:</strong> Integrating MPC as a low-level controller.</li>
+              <li><strong>Context:</strong> ROS 2 and Gazebo simulations.</li>
+            </ul>
+          </div>
+          <div style="flex: 1;">
+            <img src="Multi_Agent.png" style="max-height: 400px;">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="highlight">Pick and Place Robot</h3>
+        <div style="display: flex; gap: 20px; align-items: start;">
+          <div style="flex: 1; font-size: 0.7em;">
+            <p><strong>Project Overview:</strong></p>
+            <ul>
+              <li>Development of an automated Pick and Place sequence using robotic manipulators.</li>
+              <li>Logic implementation for trajectory planning and object handling.</li>
+              <li>Workflow optimized for industrial efficiency.</li>
+            </ul>
+          </div>
+          <div style="flex: 1.2; display: flex; flex-direction: column; gap: 10px;">
+            <img src="Arduino Arm.jpg" alt="Arduino Arm" style="max-height: 220px; width: auto;">
+            <img src="Flowchart.jpg" alt="Flowchart" style="max-height: 220px; width: auto;">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Professional Background (in Iran)</h2>
+        <ul style="font-size: 0.8em; width: 95%;">
+          <li style="margin-bottom: 15px;"><strong>Electronics Engineer | 2015–2018</strong> | Parsjahd Group <a href="http://parsjahd.com" class="web-link">parsjahd.com</a></li>
+          <li style="margin-bottom: 15px;"><strong>Senior Technical Inspector | 2018-2019</strong> | 2R Inspection <a href="http://www.2rinspections.it" class="web-link">www.2rinspections.it</a></li>
+          <li><strong>Deputy Director in Development | 2019-2023</strong> | 2R Inspection <a href="http://www.2rinspections.it" class="web-link">www.2rinspections.it</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Key Project Examples</h2>
+        <h3 style="font-size: 0.9em;">Tehran Refinery (Switching Power Supply)</h3>
+        <p style="font-size: 0.7em; color: #555;">Parsjahd Group</p>
+        <ul style="font-size: 0.8em;">
+          <li>Field instrument selection for +10 projects including Pressure and Temprerure Transmitters, Flowmeters, and Accessories.</li>
+        </ul>
+        </section>
+
+      <section>
+        <h2>Key Project Examples</h2>
+        <h3 style="font-size: 0.9em;">Natural Gas Compressor Station (Arsanjan_Kheirgoo)</h3>
+        <p style="font-size: 0.7em; color: #555;">2R Inspection & Quality Services</p>
+        <ul style="font-size: 0.8em;">
+          <li>Logic test for PLC Control System verification based on Cause and Effects Matrix.</li>
+          <li>14,000 I/O check between Field and Control Room.</li>
+        </ul>
+        <div class="media-container">
+          <img src="Page 19 -1.jpeg" style="max-height: 250px;">
+          </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      controls: true, progress: true, center: true, hash: true,
+      transition: 'slide', slideNumber: 'c/t'
+    });
+  </script>
+</body>
+</html>
