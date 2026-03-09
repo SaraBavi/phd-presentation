@@ -7,23 +7,40 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/league.min.css" id="theme">
   <style>
     .reveal h1, .reveal h3 { text-transform: none; }
-    .reveal .slide-background { background-color: #F4F4F4; } 
-    .reveal h2 { text-transform: none; color: #2C2C2C !important; }
-    .reveal h3, .highlight { color: #666666 !important; }
-    .reveal p, .reveal li, .small-text, .slide-description { color: #333333 !important; }
+    
+    /* پس‌زمینه ثابت (RGB 199, 207, 200) */
+    .reveal .slide-background { background-color: rgb(199, 207, 200); } 
+    
+    /* تغییر هدرها به سبز بسیار تیره (Dark Forest Green) */
+    .reveal h2 { text-transform: none; color: #1A2F1A !important; }
+    
+    /* هایلایت‌ها و h3 هم‌رنگ با هدرهای تیره */
+    .reveal h3, .highlight { color: #1A2F1A !important; }
+    
+    /* متن‌ها ثابت (RGB 101, 78, 106) */
+    .reveal p, .reveal li, .small-text, .slide-description, .reveal strong { 
+      color: rgb(101, 78, 106) !important; 
+    }
+    
     .small-text { font-size: 0.7em; line-height: 1.4; }
     ul { display: inline-block; text-align: left; margin-bottom: 20px; }
     li { margin-bottom: 10px; font-size: 0.85em; }
+    
     .media-container { margin-top: 15px; display: flex; justify-content: center; align-items: center; gap: 10px; }
     img, video { max-height: 350px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: contain; }
     .constrained-img { max-height: 280px !important; width: auto; }
     .tight-video { max-height: 280px !important; }
+    
+    /* شماره صفحه‌ها با رنگ ذغالی ملایم */
     .reveal .slide-number {
       background-color: transparent !important; font-size: 24px !important;
-      color: #777 !important; font-weight: bold; bottom: 20px; left: 20px; right: auto;
+      color: rgba(45, 45, 45, 0.4) !important; font-weight: bold; bottom: 20px; left: 20px; right: auto;
     }
-    .web-link { color: #007b7f; font-size: 0.85em; text-decoration: none; margin-left: 8px; }
+    
+    /* لینک‌های وب آبی تیره */
+    .web-link { color: #00008B !important; font-size: 0.85em; text-decoration: none; margin-left: 8px; }
     .web-link:hover { text-decoration: underline; }
+    
     .slide-description { font-size: 0.75em; margin-bottom: 15px; line-height: 1.5; }
   </style>
 </head>
@@ -91,6 +108,7 @@
           Confirmed bidirectional MQTT communication, real-time telemetry decoding, and fault handling.
         </div>
         <div class="media-container"><img src="Verification and Validation.jpg" class="constrained-img"></div>
+        <p style="font-size: 0.7em; margin-top: 15px;">Details: <a href="Automated_SCADA_Dashboard_01.pdf" target="_blank" class="web-link">Automated_SCADA_Dashboard_01.pdf</a></p>
       </section>
 
       <section>
@@ -116,6 +134,7 @@
         <div class="media-container">
           <video data-autoplay loop muted controls class="tight-video"><source src="battery_monitoring.mp4" type="video/mp4"></video>
         </div>
+        <p style="font-size: 0.7em; margin-top: 15px;">Details: <a href="Battery_Monitoring.pdf" target="_blank" class="web-link">Battery_Monitoring.pdf</a></p>
       </section>
 
       <section>
@@ -155,6 +174,7 @@
         <div class="media-container">
           <video data-autoplay loop muted controls class="tight-video"><source src="Seam Path Detection movie 02.mp4" type="video/mp4"></video>
         </div>
+        <p style="font-size: 0.7em; margin-top: 15px;">Details: <a href="Seam_Path_Detection.pdf" target="_blank" class="web-link">Seam_Path_Detection.pdf</a></p>
       </section>
 
       <section>
@@ -180,6 +200,7 @@
             <img src="Multi_Agent.png" style="max-height: 400px;">
           </div>
         </div>
+        <p style="font-size: 0.7em; margin-top: 15px;">Details: <a href="A_Benchmark_for_Multi_Robot_Planning.pdf" target="_blank" class="web-link">A_Benchmark_for_Multi_Robot_Planning.pdf</a></p>
       </section>
 
       <section>
@@ -198,6 +219,7 @@
             <img src="Flowchart.jpg" alt="Flowchart" style="max-height: 220px; width: auto;">
           </div>
         </div>
+        <p style="font-size: 0.7em; margin-top: 15px;">Details: <a href="Pick_place_01.pdf" target="_blank" class="web-link">Pick_place_01.pdf</a></p>
       </section>
 
       <section>
