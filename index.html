@@ -7,41 +7,62 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/league.min.css" id="theme">
   <style>
     .reveal h1, .reveal h3 { text-transform: none; }
-    
-    /* پس‌زمینه ثابت (RGB 199, 207, 200) */
     .reveal .slide-background { background-color: rgb(199, 207, 200); } 
-    
-    /* تغییر هدرها به سبز بسیار تیره (Dark Forest Green) */
     .reveal h2 { text-transform: none; color: #1A2F1A !important; }
-    
-    /* هایلایت‌ها و h3 هم‌رنگ با هدرهای تیره */
     .reveal h3, .highlight { color: #1A2F1A !important; }
-    
-    /* متن‌ها ثابت (RGB 101, 78, 106) */
     .reveal p, .reveal li, .small-text, .slide-description, .reveal strong { 
       color: rgb(101, 78, 106) !important; 
     }
-    
     .small-text { font-size: 0.7em; line-height: 1.4; }
     ul { display: inline-block; text-align: left; margin-bottom: 20px; }
     li { margin-bottom: 10px; font-size: 0.85em; }
     
-    .media-container { margin-top: 15px; display: flex; justify-content: center; align-items: center; gap: 10px; }
-    img, video { max-height: 350px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: contain; }
+    .media-container { 
+      margin-top: 15px; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      gap: 10px; 
+      background: transparent !important;
+    }
+    img, video { 
+      max-height: 450px; 
+      object-fit: contain; 
+      border: none !important; 
+      box-shadow: none !important; 
+    }
+
     .constrained-img { max-height: 280px !important; width: auto; }
     .tight-video { max-height: 280px !important; }
-    
-    /* شماره صفحه‌ها با رنگ ذغالی ملایم */
     .reveal .slide-number {
       background-color: transparent !important; font-size: 24px !important;
       color: rgba(45, 45, 45, 0.4) !important; font-weight: bold; bottom: 20px; left: 20px; right: auto;
     }
-    
-    /* لینک‌های وب آبی تیره */
     .web-link { color: #00008B !important; font-size: 0.85em; text-decoration: none; margin-left: 8px; }
     .web-link:hover { text-decoration: underline; }
-    
     .slide-description { font-size: 0.75em; margin-bottom: 15px; line-height: 1.5; }
+    .sub-link { font-size: 0.6em !important; display: block; margin-top: 2px; }
+
+    /* Custom color for "Details:" */
+    .details-label { color: #ae6908 !important; }
+
+    .ref-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      text-align: left;
+      font-size: 0.38em;
+      margin-top: 10px;
+      width: 98%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .ref-card {
+      padding: 8px 12px;
+      border: 1px solid #1A2F1A;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.2);
+    }
   </style>
 </head>
 <body>
@@ -50,31 +71,39 @@
     <div class="slides">
 
       <section>
-        <h2>Attention to Professor Götz</h2>
-        <h3 style="margin-bottom: 50px;">A Presentation of Academic & Industrial Projects</h3>
-        <p class="small-text"><strong>March 2026</strong></p>
+        <h2>A Presentation of Academic & Industrial Projects</h2>
+        <h3 style="margin-bottom: 50px;">Attention to Professor Götz</h3>
+        <p class="small-text"><strong>March 2026, Kaiserslautern</strong></p>
         <p class="small-text">Sara Bavi</p>
       </section>
 
       <section>
         <h2>Academic Background</h2>
         <ul style="font-size: 0.8em; width: 95%;">
-          <li><strong>Master of Science: Control and Automation Engineering</strong><br>
-          RPTU Kaiserslautern | Expected: 04/2026 | Grade: 1.5</li>
-          <li><strong>Master of Science: Electrical Engineering (Energy Systems)</strong><br>
-          Shahid Beheshti University | Tehran, Iran | Grade: 1.5</li>
-          <li><strong>Bachelor of Science: Electronics Engineering</strong></li>
+          <li><strong>Master of Science: Control and Automation Engineering</strong><br>RPTU Kaiserslautern | Expected: 04/2026 | Grade: 1.5</li>
+          <li><strong>Master of Science: Electrical Engineering (Energy Systems)</strong><br>Shahid Beheshti University | Tehran, Iran | Grade: 1.5</li>
+          <li><strong>Bachelor of Science: Electronics Engineering</strong><br>Azad University | Tehran, Iran | Grade: 2.2</li>
         </ul>
       </section>
 
       <section>
-        <h2>Technical Skills</h2>
-        <ul style="font-size: 0.9em;">
-          <li><strong>Protocols:</strong> Modbus TCP/IP, MQTT, CAN, HART, etc.</li>
-          <li><strong>Hardware:</strong> Field instruments (Transmitters, 2D/3D cameras, edge detectors).</li>
-          <li><strong>Software Tools:</strong> MATLAB, Simulink, Node-RED.</li>
-          <li><strong>Systems:</strong> Embedded Linux (ARM, Intel, NVIDIA) & FPGA.</li>
-          <li><strong>Programming:</strong> Python, C/C++ and JavaScript.</li>
+        <h2>Core Technical Skills</h2>
+        <h3>Vision & Communication</h3>
+        <ul style="font-size: 0.75em;">
+          <li><strong>Computer Vision:</strong> Real-time pipelines (OpenCV, SDKs), 3D vision, calibration, and image filters (Gabor, CLAHE, Gaussian).</li>
+          <li><strong>Communication & IoT:</strong> MQTT, Modbus TCP, CAN Bus, HART, PROFIBUS; SCADA architectures; Node-RED & JSON flows.</li>
+          <li><strong>Control & Simulation:</strong> Motion control algorithms, path detection, 6-DOF manipulators; MATLAB & Simulink modeling.</li>
+          <li><strong>Software Engineering:</strong> Python, C/C++, JavaScript; Git, Docker, and Linux environments.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Core Technical Skills</h2>
+        <h3>Hardware & Instrumentation</h3>
+        <ul style="font-size: 0.75em;">
+          <li><strong>Embedded Systems:</strong> ARM, Intel, NVIDIA Jetson; 2D/3D camera integration; PLC logic verification & validation.</li>
+          <li><strong>Design & Prototyping:</strong> PCB assembly (SMD/DIP), hardware troubleshooting, and circuit testing.</li>
+          <li><strong>Field Instrumentation:</strong> Expert selection, commissioning, and calibration of Temperature, Pressure, Level, and Flow rate sensors.</li>
         </ul>
       </section>
 
@@ -82,6 +111,7 @@
         <h2>Research Assistant (HiWi)</h2>
         <h3 class="highlight">RPTU | September 2024 – March 2026</h3>
         <p>Automated SCADA Generation</p>
+        <p style="font-size: 0.7em;"><a href="Automated_SCADA_Dashboard_01.pdf" target="_blank" class="web-link"><span class="details-label">Details:</span> Automated_SCADA_Dashboard_01.pdf</a></p>
       </section>
 
       <section>
@@ -96,7 +126,7 @@
       <section>
         <h2>Generated SCADA Dashboard</h2>
         <div class="slide-description">
-          Dynamically constructed UI widgets, MQTT nodes, and signal plots based strictly on firmware definitions.
+          Dynamically constructed UI widgets, MQTT nodes, and signal plots based strictly on firmware definitions(UI screenshot in bellow).
         </div>
         <div class="media-container"><img src="Node-RED Dashboard.png"></div>
       </section>
@@ -108,13 +138,13 @@
           Confirmed bidirectional MQTT communication, real-time telemetry decoding, and fault handling.
         </div>
         <div class="media-container"><img src="Verification and Validation.jpg" class="constrained-img"></div>
-        <p style="font-size: 0.7em; margin-top: 15px;">Details: <a href="Automated_SCADA_Dashboard_01.pdf" target="_blank" class="web-link">Automated_SCADA_Dashboard_01.pdf</a></p>
       </section>
 
       <section>
         <h2>Research Assistant (HiWi)</h2>
         <h3 class="highlight">RPTU | March 2024 – June 2025</h3>
         <p>Battery Monitoring System</p>
+        <p style="font-size: 0.7em;"><a href="Battery_Monitoring.pdf" target="_blank" class="web-link"><span class="details-label">Details:</span> Battery_Monitoring.pdf</a></p>
       </section>
 
       <section>
@@ -128,20 +158,22 @@
       <section>
         <h2>System Demo</h2>
         <div class="slide-description">
-          Live monitoring of individual cell voltages, temperatures, and alarm states.<br>
-          Fully integrated HMI dashboard running in a containerized environment.
+          Live monitoring of Current, voltage, individual cell voltages, temperatures, alarm states, .....<br>
+          Fully integrated HMI dashboard running in a containerized environment(Doker).
         </div>
         <div class="media-container">
           <video data-autoplay loop muted controls class="tight-video"><source src="battery_monitoring.mp4" type="video/mp4"></video>
         </div>
-        <p style="font-size: 0.7em; margin-top: 15px;">Details: <a href="Battery_Monitoring.pdf" target="_blank" class="web-link">Battery_Monitoring.pdf</a></p>
       </section>
 
       <section>
         <h2>R&D Engineer</h2>
         <h3 class="highlight">Vetron Typical Europe | Part time | July 2025 – Present</h3>
         <p>Seam Path Detection</p>
-        <a href="https://www.vetrontypical-europe.com/" target="_blank" class="web-link">www.vetrontypical-europe.com</a>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 20px;">
+            <a href="https://www.vetrontypical-europe.com/" target="_blank" class="web-link">www.vetrontypical-europe.com</a>
+            <a href="Seam_Path_Detection.pdf" target="_blank" class="web-link"><span class="details-label">Details:</span> Seam_Path_Detection.pdf</a>
+        </div>
       </section>
 
       <section>
@@ -150,14 +182,14 @@
           <strong>Goal:</strong> Detect seam paths on fabrics to adjust decorative stitch positions automatically.<br>
           <strong>Setup:</strong> Industrial Sewing Machine, XIMEA MONO8 Camera, and CAN protocol data exchange.
         </div>
-        <div class="media-container"><img src="Hardware & Componnents.jpg" style="max-height: 280px;"></div>
+        <div class="media-container"><img src="Hardware & Componnents.jpg" style="max-height: 350px;"></div>
       </section>
 
       <section>
         <h2>System Dynamics</h2>
         <div class="slide-description">
-          Compensating for vibrations and fabric wrinkles during wheel motion.<br>
-          Achieving continuous tracking to minimize manual alignment and human error.
+          Achieving continuous tracking to minimize manual alignment and human error.<br>
+          Key challenges in precise curve detection include motion-induced vibrations and fabric deformation (wrinkling).
         </div>
         <div class="media-container">
           <video data-autoplay loop muted controls class="tight-video"><source src="Moving with rollers.mp4" type="video/mp4"></video>
@@ -174,52 +206,57 @@
         <div class="media-container">
           <video data-autoplay loop muted controls class="tight-video"><source src="Seam Path Detection movie 02.mp4" type="video/mp4"></video>
         </div>
-        <p style="font-size: 0.7em; margin-top: 15px;">Details: <a href="Seam_Path_Detection.pdf" target="_blank" class="web-link">Seam_Path_Detection.pdf</a></p>
       </section>
 
       <section>
-        <h2>Academic Research in RPTU University Kaiserslautern-Landau</h2>
+        <h2>Academic Research in RPTU University</h2>
         <div style="margin-top: 50px; text-align: left; display: inline-block;">
           <ul style="font-size: 1.2em;">
-            <li class="highlight">Multi-Robot Planning with MPC</li>
-            <li class="highlight">Pick and Place Robot</li>
+            <li class="highlight">
+                Study on A Benchmark for Multi-Robot Planning paper
+                <a href="A_Benchmark_for_Multi_Robot_Planning.pdf" target="_blank" class="web-link sub-link"><span class="details-label">Details:</span> A_Benchmark_for_Multi_Robot_Planning.pdf</a>
+            </li>
+            <li class="highlight" style="margin-top: 20px;">
+                Pick-and-Place Robot with ROS2 and Arduino for
+Color-Based Sorting
+                <a href="Pick_place_01.pdf" target="_blank" class="web-link sub-link"><span class="details-label">Details:</span> Pick_place_01.pdf</a>
+            </li>
           </ul>
         </div>
       </section>
 
       <section>
-        <h3 class="highlight">Multi-Robot Planning with MPC</h3>
-        <div style="display: flex; gap: 20px; align-items: center;">
-          <div style="flex: 1;">
-            <ul>
-              <li><strong>Solution:</strong> Integrating MPC as a low-level controller.</li>
-              <li><strong>Context:</strong> ROS 2 and Gazebo simulations.</li>
+        <h2 class="highlight">A Benchmark for Multi-Robot Planning</h2>
+        <div style="display: flex; gap: 30px; align-items: center; text-align: left;">
+          <div style="flex: 1.2;">
+            <ul style="font-size: 0.75em; margin: 0; padding-left: 20px;">
+              <li><strong>Algorithms:</strong> Benchmarked several multi-robot path finding algorithms, including <strong>A*, CBS, ECBS,</strong> and <strong>EECBS</strong>.</li>
+              <li><strong>Frameworks:</strong> Utilized <strong>ROS 2, Gazebo,</strong> and <strong>Nav2</strong> to study multi-agent navigation.</li>
+              <li><strong>Integration:</strong> Leveraged the <strong>Robotics Middleware Framework (RMF)</strong> within realistic 3D simulated environments.</li>
             </ul>
           </div>
-          <div style="flex: 1;">
-            <img src="Multi_Agent.png" style="max-height: 400px;">
-          </div>
+          <div class="media-container" style="flex: 1;"><img src="Multi_Agent.png" style="max-height: 380px; border: 2px solid #1A2F1A;"></div>
         </div>
-        <p style="font-size: 0.7em; margin-top: 15px;">Details: <a href="A_Benchmark_for_Multi_Robot_Planning.pdf" target="_blank" class="web-link">A_Benchmark_for_Multi_Robot_Planning.pdf</a></p>
       </section>
 
       <section>
         <h3 class="highlight">Pick and Place Robot</h3>
         <div style="display: flex; gap: 20px; align-items: start;">
           <div style="flex: 1; font-size: 0.7em;">
-            <p><strong>Project Overview:</strong></p>
+            <p><strong>Task Overview:</strong></p>
             <ul>
-              <li>Development of an automated Pick and Place sequence using robotic manipulators.</li>
-              <li>Logic implementation for trajectory planning and object handling.</li>
-              <li>Workflow optimized for industrial efficiency.</li>
+              <li>Development of  Pick-and-Place sequence using a 6-DOF robotic manipulator</li>
+              <li>Integration of Computer Vision for color detection and object localization</li>
+              <li>Implementation of trajectory planning logic to motion control and object handling</li>
+              <li>Design of color-specific sorting routines, mapping detected hues to designated workspace coordinates</li>
+              <li>Establishment of hardware-software communication between ROS2 and Arduino</li>
             </ul>
           </div>
           <div style="flex: 1.2; display: flex; flex-direction: column; gap: 10px;">
-            <img src="Arduino Arm.jpg" alt="Arduino Arm" style="max-height: 220px; width: auto;">
-            <img src="Flowchart.jpg" alt="Flowchart" style="max-height: 220px; width: auto;">
+            <img src="Flowchart.jpg" alt="Flowchart" style="max-height: 320px;">
+            <img src="Arduino Arm.jpg" alt="Arduino Arm" style="max-height: 220px;">
           </div>
         </div>
-        <p style="font-size: 0.7em; margin-top: 15px;">Details: <a href="Pick_place_01.pdf" target="_blank" class="web-link">Pick_place_01.pdf</a></p>
       </section>
 
       <section>
@@ -234,78 +271,106 @@
       <section>
         <h2>Highlight achievements</h2>
         <p style="font-size: 0.7em; color: #555;">Parsjahd Group</p>
-        <ul style="font-size: 0.8em;">
-          <li>Field instrument selection for +10 projects including Pressure and Temperature Transmitters, Flowmeters, and Accessories.</li>
-        </ul>
-        <div class="media-container">
-          <img src="Page 19.jpeg" style="max-height: 250px;">
+        <div style="text-align: center; width: 100%;">
+          <ul style="font-size: 0.85em; margin-bottom: 10px;">
+            <li>Field instrument selection for +10 projects including Pressure and Temperature Transmitters, Flowmeters, and Accessories.</li>
+          </ul>
+          <div class="media-container" style="margin-top: 5px;">
+            <img src="instrument.jpg" style="max-height: 400px; width: auto;">
+          </div>
         </div>
       </section>
 
       <section>
-        <h2>Highlight achievements</h2>
-        <p style="font-size: 0.7em; color: #555;">2R Inspection & Quality Services</p>
-        <ul style="font-size: 0.8em;">
-          <li>Logic test for PLC Control System verification based on Cause and Effects Matrix.</li>
-          <li>14,000 I/O check between Field and Control Room of Natural Gas Compressor Station project in ARSANJAN</li>
-        </ul>
-        <div class="media-container">
-          <img src="Page 20.jpeg" style="max-height: 300px;">
-        </div>
-      </section>
+  <h2>Highlight achievements</h2>
+  <p style="font-size: 0.7em; color: #555;">2R Inspection & Quality Services</p>
+  <div style="display: flex; gap: 20px; align-items: center;"> 
+    <div style="flex: 1; font-size: 0.8em; text-align: left;">
+      <ul>
+        <li>Logic test for PLC Control System verification based on Cause and Effects Matrix.</li>
+        <li>14,000 I/O check between Field and Control Room of Natural Gas Compressor Station project in ARSANJAN</li>
+      </ul>
+    </div>
+    <div style="flex: 1.2;">
+      <img src="Page 20.jpeg" style="max-height: 300px; width: auto; display: block;">
+    </div>
+  </div>
+</section>
 
       <section>
-        <h2>Academic & Industry References</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; text-align: left; font-size: 0.45em; margin-top: 20px; width: 85%; margin-left: auto; margin-right: auto;">
-          
-          <div style="padding: 10px 15px; border: 1px solid #1A2F1A; border-radius: 8px; background: rgba(255, 255, 255, 0.2);">
-            <p style="margin-bottom: 5px; font-size: 1.1em; color: #1A2F1A;"><strong>Univ.-Prof. Dr. Steven Liu</strong></p>
-            <p style="margin: 0; line-height: 1.4;">
-              RPTU Kaiserslautern-Landau<br>
-              Chair of Control Systems (LRS)<br><br>
-              <strong>Relationship:</strong> HIWI Supervisor & Course Instructor<br>
-              <strong>Email:</strong> <a href="mailto:steven.liu@rptu.de" class="web-link" style="margin-left: 0;">steven.liu@rptu.de</a><br>
-              <strong>Tel:</strong> +49 631 205 4535<br>
-              <strong>Room:</strong> 12/332
-            </p>
-          </div>
+  <h2 style="margin-top: 0;">Academic & Industry References</h2>
+  <div class="ref-grid" style="grid-template-columns: repeat(2, 1fr); font-size: 0.35em; gap: 8px; margin-top: 5px;">
+    
+    <div class="ref-card">
+      <p style="margin-bottom: 2px; font-size: 1.1em; color: #1A2F1A;"><strong>Univ.-Prof. Dr. Steven Liu</strong></p>
+      <p style="margin: 0; line-height: 1.2;">
+        RPTU Kaiserslautern-Landau<br>
+        Chair of Control Systems (LRS)<br>
+        <strong>Relationship:</strong> HIWI Leiter & Course Instructor<br>
+        <strong>Email:</strong> steven.liu@rptu.de<br>
+        <strong>Tel:</strong> +49 631 205 4535<br>
+        <strong>Room:</strong> 12/332
+      </p>
+    </div>
 
-          <div style="padding: 10px 15px; border: 1px solid #1A2F1A; border-radius: 8px; background: rgba(255, 255, 255, 0.2);">
-            <p style="margin-bottom: 5px; font-size: 1.1em; color: #1A2F1A;"><strong>apl. Prof. Dr.-Ing. Daniel Görges</strong></p>
-            <p style="margin: 0; line-height: 1.4;">
-              RPTU Kaiserslautern-Landau<br>
-              Institute of Electromobility<br><br>
-              <strong>Relationship:</strong> Thesis Supervisor & Course Instructor<br>
-              <strong>Email:</strong> <a href="mailto:goerges@eit.uni-kl.de" class="web-link" style="margin-left: 0;">goerges@eit.uni-kl.de</a><br>
-              <strong>Tel:</strong> +49 631 205 2091<br>
-              <strong>Room:</strong> 12/266
-            </p>
-          </div>
+    <div class="ref-card">
+      <p style="margin-bottom: 2px; font-size: 1.1em; color: #1A2F1A;"><strong>apl. Prof. Dr.-Ing. Daniel Görges</strong></p>
+      <p style="margin: 0; line-height: 1.2;">
+        RPTU Kaiserslautern-Landau<br>
+        Institute of Electromobility<br>
+        <strong>Relationship:</strong> Thesis Supervisor & Course Instructor<br>
+        <strong>Email:</strong> goerges@eit.uni-kl.de<br>
+        <strong>Tel:</strong> +49 631 205 2091<br>
+        <strong>Room:</strong> 12/266
+      </p>
+    </div>
 
-          <div style="padding: 10px 15px; border: 1px solid #1A2F1A; border-radius: 8px; background: rgba(255, 255, 255, 0.2);">
-            <p style="margin-bottom: 5px; font-size: 1.1em; color: #1A2F1A;"><strong>Holger Labes</strong></p>
-            <p style="margin: 0; line-height: 1.4;">
-              CEO, VETRON TYPICAL Europe GmbH<br><br>
-              <strong>Relationship:</strong> Industry Supervisor<br>
-              <strong>Email:</strong> <a href="mailto:Holger.Labes@vetrontypical.com" class="web-link" style="margin-left: 0;">Holger.Labes@vetrontypical.com</a><br>
-              <strong>Tel:</strong> +49 6301 320750<br>
-              <strong>Address:</strong> Clara-Immerwahr-Str. 6, 67661 Kaiserslautern
-            </p>
-          </div>
+    <div class="ref-card">
+      <p style="margin-bottom: 2px; font-size: 1.1em; color: #1A2F1A;"><strong>Holger Labes</strong></p>
+      <p style="margin: 0; line-height: 1.2;">
+        CEO, VETRON TYPICAL Europe GmbH<br>
+        <strong>Relationship:</strong> Industry Supervisor<br>
+        <strong>Email:</strong> Holger.Labes@vetrontypical.com<br>
+        <strong>Tel:</strong> +49 6301 320750<br>
+        <strong>Address:</strong> Clara-Immerwahr-Str. 6, 67661 Kaiserslautern
+      </p>
+    </div>
 
-          <div style="padding: 10px 15px; border: 1px solid #1A2F1A; border-radius: 8px; background: rgba(255, 255, 255, 0.2);">
-            <p style="margin-bottom: 5px; font-size: 1.1em; color: #1A2F1A;"><strong>Michael Dinges</strong></p>
-            <p style="margin: 0; line-height: 1.4;">
-              HW/SW Entwicklung, VETRON TYPICAL Europe GmbH<br><br>
-              <strong>Relationship:</strong> Direct Manager<br>
-              <strong>Email:</strong> <a href="mailto:Michael.Dinges@vetrontypical.com" class="web-link" style="margin-left: 0;">Michael.Dinges@vetrontypical.com</a><br>
-              <strong>Tel:</strong> +49 6301 320750<br>
-              <strong>Address:</strong> Clara-Immerwahr-Str. 6, 67661 Kaiserslautern
-            </p>
-          </div>
+    <div class="ref-card">
+      <p style="margin-bottom: 2px; font-size: 1.1em; color: #1A2F1A;"><strong>Michael Dinges</strong></p>
+      <p style="margin: 0; line-height: 1.2;">
+        HW/SW Entwicklung Leiter, VETRON TYPICAL Europe GmbH<br>
+        <strong>Relationship:</strong> Direct Manager<br>
+        <strong>Email:</strong> Michael.Dinges@vetrontypical.com<br>
+        <strong>Tel:</strong> +49 6301 320750<br>
+        <strong>Address:</strong> Clara-Immerwahr-Str. 6, 67661 Kaiserslautern
+      </p>
+    </div>
 
-        </div>
-      </section>
+    <div class="ref-card">
+      <p style="margin-bottom: 2px; font-size: 1.1em; color: #1A2F1A;"><strong>Reza Hassanpour</strong></p>
+      <p style="margin: 0; line-height: 1.2;">
+        CEO, 2R Inspection & Quality Services<br>
+        <strong>Relationship:</strong> Industry Supervisor<br>
+        <strong>Email:</strong> r.hassanpour@2r-co.com<br>
+        <strong>Tel:</strong> +989123242157<br>
+        <strong>Address:</strong> No.45, Valiasr st. Tehran, Iran
+      </p>
+    </div>
+
+    <div class="ref-card">
+      <p style="margin-bottom: 2px; font-size: 1.1em; color: #1A2F1A;"><strong>Ali Shahrabi</strong></p>
+      <p style="margin: 0; line-height: 1.2;">
+        CEO, Parsjahd Group<br>
+        <strong>Relationship:</strong> Industry Supervisor<br>
+        <strong>Email:</strong> ali.shahrabi@parsjahd.com<br>
+        <strong>Tel:</strong> +989121518819<br>
+        <strong>Address:</strong> No.16th, Beyhaghi Blvd., Tehran, Iran
+      </p>
+    </div>
+
+  </div>
+</section>
 
     </div>
   </div>
